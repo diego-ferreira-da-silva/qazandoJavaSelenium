@@ -33,4 +33,13 @@ public class CadastroPage {
         String criadoComSucesso = "Usuário Criado com sucesso";
         assertEquals(criadoComSucesso, texto_confirm);
     }
+
+    public void clicarBotaoVoltar(){
+        driver.findElement(By.xpath("//a[@class='btn waves-light red']")).click();
+    }
+
+    public void validarTelaListaUsuarios(){
+        String userList = driver.findElement(By.className("center")).getText();
+        System.out.println(userList);
+    }
 }

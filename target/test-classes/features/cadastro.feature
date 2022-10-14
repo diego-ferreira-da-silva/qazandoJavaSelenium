@@ -10,3 +10,8 @@
        Quando preencho os dados necessários no formulário
        E clico no botão criar
        Então vejo a mensagem Usuário Criado com sucesso
+
+     Cenário: Clicar no botão voltar
+       Dado que tenha realizado o cadastro
+       Quando clico no botão voltar
+       Então sou direcionado a tela de usuários cadastrados

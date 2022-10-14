@@ -3,6 +3,7 @@ package steps;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
+import org.openqa.selenium.By;
 import pages.CadastroPage;
 import runners.RunCucumberTest;
 
@@ -27,5 +28,21 @@ public class CadastroStep extends RunCucumberTest {
     @Então("vejo a mensagem Usuário Criado com sucesso")
     public void vejo_a_mensagem_usuário_criado_com_sucesso() {
         cadastroPage.validarCadastro();
+    }
+
+    @Dado("que tenha realizado o cadastro")
+    public void que_tenha_realizado_o_cadastro() {
+        cadastroPage.acessarAplicacao();
+        cadastroPage.preencherFormulario();
+        cadastroPage.clicarBotaoCriarUsuario();
+    }
+    @Quando("clico no botão voltar")
+    public void clico_no_botão_voltar(){
+        cadastroPage.clicarBotaoVoltar();
+    }
+
+    @Então("sou direcionado a tela de usuários cadastrados")
+    public void sou_recionado_a_tela_de_usuários_cadastrados(){
+        cadastroPage.validarTelaListaUsuarios();
     }
 }
