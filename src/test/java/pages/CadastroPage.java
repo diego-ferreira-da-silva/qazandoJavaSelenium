@@ -15,6 +15,7 @@ public class CadastroPage {
         driver.get("https://automacaocombatista.herokuapp.com/users/new");
         assertTrue("Não acessou a aplicação", driver.findElement(By.xpath("//h5[@class='center']")).isDisplayed());
     }
+
     public void preencherFormulario(){
         driver.findElement(By.id("user_name")).sendKeys("Teste");
         driver.findElement(By.id("user_lastname")).sendKeys("Tester QA");
